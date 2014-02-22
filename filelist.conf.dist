@@ -1,0 +1,14 @@
+; This is a template config file for distribution
+; 1) Copy this file to `filelist.conf` 
+; 2) Edit the file to add your own configuration
+; 3) Use the cli tool (`bin/console`) without specifying a --config flag, it will be auto-detected
+
+[general]
+driver = filesystem
+
+[filesystem]
+path = /data/my/filelists/
+
+[objectstorage]
+config = objectstorage.conf
+

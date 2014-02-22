@@ -1,0 +1,25 @@
+{
+    "name": "linkorb/filelist",
+    "description": "Easily attach lists of files to any object in your application",
+    "homepage": "http://www.github.com/linkorb/filelist",
+    "keywords": ["objectstorage", "osd", "objectstore", "s3", "gridfs", "mongodb", "storage", "cloud storage"],
+    "type": "library",
+    "authors": [
+        {
+            "name": "Joost Faassen",
+            "email": "j.faassen@linkorb.com",
+    	    "role": "Development"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "symfony/console": "2.4.*@dev",
+        "linkorb/objectstorage": "dev-master"
+    },
+    "autoload": {
+	"psr-0": {
+	    "LinkORB\\Component\\FileList\\": "src/"
+	} 
+    },
+    "license": "MIT"
+}
