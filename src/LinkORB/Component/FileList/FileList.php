@@ -32,10 +32,10 @@ class FileList
     */
     public static function filterFilename($name)
     {
-        $newName = preg_replace('/[^a-zA-Z0-9_\-\.]/', '_', $newName);
-        $newName = preg_replace('/_+/', '_', $name);
-        $newName = str_replace('..', '.', $newName);
-        return $newName;
+        $name = preg_replace('/_+/', '_', $name);
+        $name = preg_replace('/[^a-zA-Z0-9_\-\.]/', '_', $name);
+        $name = str_replace('..', '.', $name);
+        return $name;
     }
 
 
