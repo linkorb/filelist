@@ -24,19 +24,37 @@ class FileList
     }
 
 
+
+    /**
+    * Filter filename.
+    * @param string $name The original filename.
+    * @return string The filtered file name.
+    */
+    public static function filterFilename($name)
+    {
+        $newName = preg_replace('/[^a-zA-Z0-9_\-\.]/', '_', $newName);
+        $newName = preg_replace('/_+/', '_', $name);
+        $newName = str_replace('..', '.', $newName);
+        return $newName;
+    }
+
+
     public function get($filename)
     {
+        $filename = $this->filterFilename($filename);
         $data = $this->driver->get($this, $filename);
         return $data;
     }
 
     public function set($filename, $data)
     {
+        $filename = $this->filterFilename($filename);        
         $this->driver->set($this, $filename, $data);
     }
 
     public function delete($filename)
     {
+        $filename = $this->filterFilename($filename);        
         $this->driver->delete($this, $filename);
     }
 
