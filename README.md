@@ -2,6 +2,9 @@
 
 Easily manage lists of files attached to any object in your application
 
+**PLEASE READ**: This package is no longer maintained, and replaced by a better implementation. Please check out FileSpace instead:
+[http://github.com/linkorb/filespace](http://github.com/linkorb/filespace)
+
 ## How does it work:
 
 First, you need to instantiate a `driver`. The driver allows you to chose where your files will be physically stored.
